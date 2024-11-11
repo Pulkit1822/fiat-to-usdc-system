@@ -1,2 +1,1 @@
-# fiat-to-usdc-system
-A repository for a fiat to USDC conversion system
+This repository is empty. Any task executed on it should be considered a new capability and needs to be created.
