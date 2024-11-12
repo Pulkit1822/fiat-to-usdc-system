@@ -1,425 +1,212 @@
-# Project Description
-
-Create a production-ready system for converting fiat currency to USDC through a centralized treasury, focusing on security, reliability, and scalability. The implementation should include all necessary components, from user interaction to blockchain integration.
-
-## System Requirements
-
-### Functional Requirements
-1. User Registration and KYC
-   - Complete user authentication system
-   - KYC/AML compliance integration
-   - User wallet management
-   - Banking information verification
-
-2. Transaction Processing
-   - Real-time fiat deposit detection
-   - Automated USDC distribution
-   - Transaction status tracking
-   - Multi-currency support
-   - Exchange rate management
-
-3. Treasury Management
-   - Multi-signature wallet implementation
-   - Liquidity pool management
-   - Rebalancing mechanisms
-   - Risk management systems
-
-4. Monitoring and Reporting
-   - Real-time transaction monitoring
-   - Automated reconciliation
-   - Audit trail generation
-   - Compliance reporting
-
-### Technical Requirements
-1. Architecture
-   - Microservices-based design
-   - Event-driven architecture
-   - High availability setup
-   - Disaster recovery planning
-
-2. Security
-   - End-to-end encryption
-   - Hardware security module (HSM) integration
-   - Multi-factor authentication
-   - Rate limiting and fraud detection
-
-3. Performance
-   - Sub-second transaction processing
-   - 99.99% uptime
-   - Horizontal scalability
-   - Load balancing
-
-## Deliverables Required
-
-### 1. System Architecture
-- Detailed component diagrams
-- Sequence diagrams for all flows
-- Network architecture
-- Database schema
-- API documentation
-
-### 2. Implementation Details
-
-#### Backend Services
-- User Service
-  - Complete authentication system
-  - KYC integration
-  - Wallet management
-  - User preferences
-
-- Transaction Service
-  - Payment processing
-  - Exchange rate management
-  - Fee calculation
-  - Transaction status tracking
-
-- Treasury Service
-  - Wallet management
-  - Liquidity pool operations
-  - Rebalancing logic
-  - Risk management
-
-- Monitoring Service
-  - Transaction monitoring
-  - Alert management
-  - Reporting
-  - Analytics
-
-#### Smart Contracts
-- Treasury contract
-- User wallet contract
-- Transaction verification
-- Access control
-
-#### Frontend Components
-- User dashboard
-- Transaction management
-- Admin panel
-- Reporting interface
-
-### 3. Infrastructure Setup
-- Cloud architecture (AWS/GCP/Azure)
-- Kubernetes configuration
-- CI/CD pipelines
-- Monitoring setup
-
-### 4. Documentation
-- API documentation
-- System architecture documentation
-- Deployment guides
-- User manuals
-- Admin guides
-- Security documentation
-
-### 5. Testing Suite
-- Unit tests
-- Integration tests
-- Load tests
-- Security tests
-- Compliance tests
-
-## Implementation Guidelines
-
-1. Code Quality
-- Follow SOLID principles
-- Implement design patterns appropriately
-- Maintain consistent coding style
-- Include comprehensive comments
-- Use TypeScript for type safety
-
-2. Security Considerations
-- Implement rate limiting
-- Use secure communication protocols
-- Implement proper authentication
-- Follow secure coding practices
-- Regular security audits
-
-3. Testing Requirements
-- 100% unit test coverage
-- Integration tests for critical paths
-- Load testing scenarios
-- Security testing procedures
-- Compliance verification
-
-4. Performance Metrics
-- Transaction processing time < 1s
-- System uptime > 99.99%
-- API response time < 100ms
-- Scalability to handle 1000+ TPS
-
-## Additional Requirements
-
-1. Error Handling
-- Comprehensive error codes
-- Detailed error messages
-- Error recovery procedures
-- Fallback mechanisms
-
-2. Monitoring
-- Real-time dashboards
-- Alert configurations
-- Performance metrics
-- Audit logging
-
-3. Compliance
-- GDPR compliance
-- Financial regulations
-- Data protection
-- Audit requirements
-
-4. Deployment
-- Blue-green deployment strategy
-- Rollback procedures
-- Backup strategies
-- Disaster recovery plans
-
-## Example Usage
-
-Please provide working examples for:
-
-1. User onboarding flow
-2. Transaction processing
-3. Treasury management
-4. System monitoring
-5. Error handling
-6. Deployment procedures
-
-## Output Expectations
-
-The response should include:
-
-1. Complete source code for all components
-2. Detailed documentation
-3. Configuration files
-4. Test suites
-5. Deployment guides
-6. Security protocols
-7. Monitoring setup
-
-Note: Generate all diagrams using Mermaid or PlantUML syntax for easy rendering.
-
-## Sample Data
-
-Include sample data for:
-1. User profiles
-2. Transactions
-3. Exchange rates
-4. System configurations
-5. Test scenarios
-
-## Evaluation Criteria
-
-The implementation will be evaluated based on:
-1. Code quality and organization
-2. Security measures
-3. Performance optimization
-4. Documentation completeness
-5. Test coverage
-6. Deployment readiness
-7. Compliance adherence
-
-## Technical Detailed Component Architecture
-
-### Overview
-
-This document provides a detailed overview of the technical component architecture for the production-ready system for converting fiat currency to USDC through a centralized treasury. The architecture focuses on security, reliability, and scalability, and includes all necessary components from user interaction to blockchain integration.
-
-### Key Components and Architecture
-
-#### 1. Treasury Wallet
-A secure wallet holding the USDC that will be sent to users after receiving fiat payments. It should be multi-sig or use some form of heightened security (especially for large transfers).
-
-#### 2. Fiat Bank Account (Onramp)
-A bank account where users send their fiat. The system will need a reliable way to detect deposits in real-time (via webhook, API integration with the bank, or batch reconciliation).
-
-#### 3. Liquidity Pool (Rebalancing)
-The liquidity pool ensures that you have enough USDC to fulfill user requests without draining your treasury wallet. The liquidity pool can be internally managed or connected to external liquidity sources.
-
-#### 4. User Wallets
-The destination for the fiat-onramp user’s USDC after rebalancing.
-
-#### 5. Reconciliation System
-Tracks all deposits and transactions to ensure that there’s no discrepancy between the fiat received and USDC sent. The system needs a mechanism for comparing bank account records, treasury balances, and user wallet transactions.
-
-#### 6. Transaction Monitoring System
-Monitors the state of the blockchain to ensure the USDC transfer is successful. This system should also handle retries for failed transactions.
-
-### Component Diagrams
-
-#### Component Diagram
-```plantuml
-@startuml
-package "Fiat to USDC Conversion System" {
-  [User] --> [Fiat Bank Account]
-  [Fiat Bank Account] --> [Reconciliation System]
-  [Reconciliation System] --> [Treasury Wallet]
-  [Treasury Wallet] --> [Liquidity Pool]
-  [Liquidity Pool] --> [User Wallets]
-  [User Wallets] --> [Transaction Monitoring System]
-}
-@enduml
-```
-
-#### Sequence Diagram
-```plantuml
-@startuml
-actor User
-participant "Fiat Bank Account" as FBA
-participant "Reconciliation System" as RS
-participant "Treasury Wallet" as TW
-participant "Liquidity Pool" as LP
-participant "User Wallets" as UW
-participant "Transaction Monitoring System" as TMS
+<p align="center">
+  <a href="https://github.com/Pulkit1822/fiat-to-usdc-system">
+    <img src="https://hackmd.io/_uploads/rJFxJ-Zz1g.jpg" height="128">
+  </a>
+  <h1 align="center">System Design for Robust Distribution System for Fiat to USDC Conversion</h1>
+</p>
 
-User -> FBA: Send Fiat
-FBA -> RS: Notify Deposit
-RS -> TW: Verify Deposit
-TW -> LP: Rebalance USDC
-LP -> UW: Transfer USDC
-UW -> TMS: Monitor Transaction
-TMS -> User: Confirm Transfer
-@enduml
-```
-
-## Transaction Flow Patterns
+**Submitted by:** Pulkit Kumar Mathur  
+**Registration Number:** 21BCE11602  
+**Github Project (added 'CharterLabsInc' as a  collaborator to view ):** [Tap here](https://github.com/Pulkit1822/fiat-to-usdc-system) 
 
-### Overview
 
-This section provides a detailed overview of the transaction flow patterns for the production-ready system for converting fiat currency to USDC through a centralized treasury. The flow patterns focus on security, reliability, and scalability, and include all necessary components from user interaction to blockchain integration.
 
-### Transaction Flow
+---
 
-#### User Sends Fiat to Bank
-- The user initiates a fiat transfer to your bank account.
-- You would need to track this transaction in real-time or via batch reconciliation.
+## Index
 
-#### Fiat Deposit Notification
-- The system (via API or webhook) receives notification when fiat is deposited into the bank account.
-- The amount deposited is verified against user information (e.g., deposit reference).
+1. **Introduction**
+   - Problem Statement
 
-#### Fiat to USDC Conversion
-- Upon verification, the system ensures sufficient liquidity exists in the treasury or liquidity pool.
-- You then rebalance the fiat deposit into USDC from the liquidity pool or treasury.
+2. **Core Challenges**
+   - Reliable Distribution of Funds
+   - Accurate Reconciliation
+   - Handling Edge Cases
 
-#### USDC Transfer to User’s Wallet
-- The equivalent amount of USDC is sent from the treasury wallet (or liquidity pool) to the user’s wallet on-chain.
-- Transaction is logged for transparency and tracking.
+3. **System Architecture Overview**
+   - Key Components and Their Roles
 
-#### Confirmation and Reconciliation
-- Once the transfer is completed, both the bank and blockchain transactions should be reconciled.
-- You verify that the amount of USDC matches the fiat deposited and update the internal ledger.
+4. **Key Components**
+   - Treasury Wallet
+   - Fiat Bank Account (Onramp)
+   - Liquidity Pool
+   - User Wallets
+   - Reconciliation System
+   - Transaction Monitoring System
 
-## Reconciliation Algorithms
+5. **Transaction Flow**
+   - User Sends Fiat to Bank
+   - Fiat Deposit Notification
+   - Fiat to USDC Conversion
+   - USDC Transfer to User’s Wallet
+   - Confirmation and Reconciliation
 
-### Overview
+6. **Technical Component Architecture**
+   - Backend Services
+   - Database and Ledger
+   - API Layer
 
-This section provides a detailed overview of the reconciliation algorithms for the production-ready system for converting fiat currency to USDC through a centralized treasury. The algorithms focus on security, reliability, and scalability, and include all necessary components from user interaction to blockchain integration.
+7. **Reconciliation Algorithms**
+   - Automated Reconciliation
+   - Manual Reconciliation and Audit
 
-### Reconciliation Process
+8. **Error Handling Strategies**
+   - Transaction Delays
+   - Discrepancies in Amounts
+   - Failed Transfers
+   - Real-Time Monitoring and Alerts
 
-#### Step 1: Track Deposits
-- The system tracks all fiat deposits made to the bank account in real-time or via batch reconciliation.
 
-#### Step 2: Verify Deposits
-- The system verifies the amount deposited against user information (e.g., deposit reference).
+---
 
-#### Step 3: Rebalance USDC
-- The system ensures sufficient liquidity exists in the treasury or liquidity pool.
-- The fiat deposit is rebalanced into USDC from the liquidity pool or treasury.
 
-#### Step 4: Transfer USDC
-- The equivalent amount of USDC is sent from the treasury wallet (or liquidity pool) to the user’s wallet on-chain.
-- Transaction is logged for transparency and tracking.
+## 1. Problem Statement
 
-#### Step 5: Reconcile Transactions
-- The system reconciles both the bank and blockchain transactions to ensure there are no discrepancies.
-- The internal ledger is updated to reflect the reconciled transactions.
+The goal is to create a robust system that enables users to seamlessly convert fiat currency into USDC (USD Coin) by transferring fiat to a designated bank account. The system will handle the entire process—from tracking the fiat deposit to delivering the USDC to the user’s specified wallet—with a focus on security, accuracy, and reliability. This solution must include automatic rebalancing to maintain liquidity, prevent discrepancies, and ensure efficient fund distribution. 
 
-## Error Handling Strategies
+---
 
-### Overview
+## 2. Core Challenges
 
-This section provides a detailed overview of the error handling strategies for the production-ready system for converting fiat currency to USDC through a centralized treasury. The strategies focus on security, reliability, and scalability, and include all necessary components from user interaction to blockchain integration.
+**1. Reliable Distribution of Funds**  
+Ensuring that users receive the correct amount of USDC in their wallets once fiat is received in our bank account is critical. The system must achieve high accuracy, maintain low latency, and process transactions securely.
 
-### Error Handling Process
+**2. Accurate Reconciliation**  
+Maintaining an accurate, traceable link between fiat deposits and USDC distributions is essential to avoid discrepancies. This includes reconciling data from multiple sources—bank records, blockchain transactions, and internal ledgers.
 
-#### Step 1: Detect Errors
-- The system detects errors in real-time or via batch processing.
+**3. Handling Edge Cases**  
+The system must gracefully manage potential issues like transaction delays, discrepancies, and failed transfers. Each edge case must be detected, monitored, and resolved to ensure a seamless user experience.
 
-#### Step 2: Log Errors
-- The system logs errors for transparency and tracking.
+---
 
-#### Step 3: Notify Users
-- The system notifies users of errors via email or SMS.
+## 3. System Architecture Overview
 
-#### Step 4: Retry Failed Transactions
-- The system retries failed transactions to ensure successful completion.
+In designing this system, I focused on creating a modular and secure structure to handle each stage of the fiat-to-USDC process. The main components include a centralized treasury wallet, a fiat bank account, a liquidity pool, user wallets, and a series of services for reconciliation, transaction monitoring, and error handling. 
+![Screenshot 2024-11-12 at 10.07.59 PM](https://hackmd.io/_uploads/rkQKNb-zJe.png)
 
-#### Step 5: Escalate Critical Errors
-- The system escalates critical errors to the appropriate team for resolution.
 
-## How to Run the Project Locally
 
-To run this project on your local system, follow these steps:
+### 4.  Key Components and Their Roles
 
-1. **Clone the repository:**
-   ```sh
-   git clone https://github.com/your-username/fiat-to-usdc-conversion.git
-   cd fiat-to-usdc-conversion
-   ```
+![Component Diagram](https://hackmd.io/_uploads/S1KdLWZM1e.png)
 
-2. **Install dependencies:**
-   ```sh
-   npm install
-   ```
 
-3. **Set up environment variables:**
-   Create a `.env` file in the root directory and add the necessary environment variables. Refer to the `.env.example` file for the required variables.
+**1. Treasury Wallet**  
+   - This wallet holds the USDC required for user payouts. Since the treasury wallet is central to the system, I would secure it with multi-signature (multi-sig) technology or advanced security protocols to protect against unauthorized transactions, especially for large amounts.
 
-4. **Start the development server:**
-   ```sh
-   npm run dev
-   ```
+**2. Fiat Bank Account (Onramp)**  
+   - This is the entry point where users transfer their fiat currency. The system needs to detect deposits as they arrive—this can be achieved through a webhook, API integration with the bank, or batch reconciliation if real-time detection isn’t available.
 
-5. **Access the application:**
-   Open your browser and navigate to `http://localhost:3000` to access the application.
+**3. Liquidity Pool**  
+   - The liquidity pool ensures there’s always enough USDC for conversions without depleting the treasury. The pool can draw from external liquidity sources or use internal reserves to rebalance as needed.
 
-## Contribution Guidelines
+**4. User Wallets**  
+   - Each user has a designated wallet to receive USDC. The system sends the equivalent amount of USDC from the treasury or liquidity pool to these wallets upon successful fiat receipt.
 
-We welcome contributions to this project! To contribute, follow these steps:
+**5. Reconciliation System**  
+   - This system monitors and reconciles all fiat deposits and USDC distributions, ensuring that each transaction is accurately matched and recorded. The reconciliation process compares bank statements, blockchain transactions, and internal records to avoid any inconsistencies.
 
-1. **Fork the repository:**
-   Click the "Fork" button at the top right corner of this page to create a copy of the repository in your GitHub account.
+**6. Transaction Monitoring System**  
+   - This module monitors USDC transfers on the blockchain to confirm that each transaction reaches the intended wallet successfully. In the event of a failed transaction, the monitoring system initiates a retry sequence.
 
-2. **Clone your forked repository:**
-   ```sh
-   git clone https://github.com/your-username/fiat-to-usdc-conversion.git
-   cd fiat-to-usdc-conversion
-   ```
+---
 
-3. **Create a new branch:**
-   ```sh
-   git checkout -b feature/your-feature-name
-   ```
+## 5. Transaction Flow
 
-4. **Make your changes:**
-   Implement your changes and ensure that the code follows the project's coding standards.
+The transaction flow is the backbone of this system. It represents each step from the moment a user sends fiat to the final reconciliation of USDC in their wallet. Here’s how each step would work:
 
-5. **Commit your changes:**
-   ```sh
-   git add .
-   git commit -m "Add your commit message here"
-   ```
+**1. User Sends Fiat to Bank**  
+   - When a user initiates a fiat transfer, they specify the bank account and provide a unique reference. The system tracks the transaction in real time, using bank APIs or webhooks to receive instant notifications whenever funds arrive.
+![User Sends Fiat to Bank](https://hackmd.io/_uploads/SkikBZZf1l.png)
 
-6. **Push your changes:**
-   ```sh
-   git push origin feature/your-feature-name
-   ```
 
-7. **Create a pull request:**
-   Go to the original repository and click the "New Pull Request" button. Provide a detailed description of your changes and submit the pull request.
+**2. Fiat Deposit Notification**  
+   - Once the fiat deposit is detected, the system verifies the transaction by checking the deposit reference and amount against user information. This confirmation step is critical to ensure that the right user receives the correct amount of USDC.
 
-8. **Review and merge:**
-   Your pull request will be reviewed by the project maintainers. Once approved, it will be merged into the main branch.
+**3. Fiat to USDC Conversion**  
+   - After verifying the fiat deposit, the system checks if the treasury wallet or liquidity pool has sufficient USDC to complete the transaction. If funds are insufficient, it initiates a rebalancing process. Then, based on current conversion rates, the fiat amount is converted into the equivalent USDC.
 
-Thank you for contributing to this project!
+![Screenshot 2024-11-12 at 10.11.59 PM](https://hackmd.io/_uploads/rkkuHW-z1e.png)
+
+
+
+**4. USDC Transfer to User’s Wallet**  
+   - The system transfers the calculated amount of USDC from the treasury wallet or liquidity pool to the user’s wallet on the blockchain. This transaction is recorded for accountability and transparency.
+
+![Screenshot 2024-11-12 at 10.14.21 PM](https://hackmd.io/_uploads/rk7-I-ZMkx.png)
+
+
+
+**5. Confirmation and Reconciliation**  
+   - Finally, the system performs reconciliation by cross-verifying bank records, blockchain transactions, and internal logs. This ensures that every fiat deposit matches an outgoing USDC transaction, maintaining an accurate ledger for auditing and troubleshooting.
+
+![Confirmation and Reconciliation](https://hackmd.io/_uploads/ByBmUZbfJl.png)
+
+
+---
+
+## 6. Technical Component Architecture
+
+To develop a secure, scalable solution, I divided the architecture into key services that interact through APIs and automated workflows:
+
+### Backend Services
+
+- **Transaction Service**: Manages fiat-to-USDC conversions and interactions between the treasury wallet and liquidity pool.
+- **Reconciliation Service**: Performs automated reconciliation to ensure fiat deposits and USDC distributions are accurately paired.
+- **Notification Service**: Sends status updates to users and administrators about transaction progress or any issues.
+
+### Database and Ledger
+
+- **Database**: Stores transaction data, user information, and internal references.
+- **Ledger**: Maintains an immutable record of transactions, enabling transparency and easy audits.
+
+### API Layer
+
+- **Bank API**: Integrates with the bank to detect fiat deposits and retrieve transaction data.
+- **Blockchain API**: Interfaces with the blockchain to monitor USDC transfers, initiate retries, and confirm transaction status.
+
+---
+
+## 7. Reconciliation Algorithms
+
+To maintain a high level of accuracy, the system includes both automated and manual reconciliation algorithms:
+
+### Automated Reconciliation
+
+- **Data Matching**: The system matches fiat deposits in the bank with corresponding USDC transactions on the blockchain.
+- **Discrepancy Detection**: Any unmatched transactions trigger alerts for manual review.
+
+### Manual Reconciliation and Audit
+
+- **Audit Trail**: A detailed log of all transactions provides a backup for any unresolved discrepancies, making it easier to audit or troubleshoot.
+
+---
+
+## 8. Error Handling Strategies
+
+Anticipating potential issues, the system incorporates error-handling strategies to manage transaction delays, discrepancies, and failed transfers effectively:
+
+### Transaction Delays
+   - **Retry Logic**: The system retries USDC transfers if they’re delayed.
+   - **User Notification**: Sends alerts to the user if delays exceed preset thresholds.
+
+### Discrepancies in Amounts
+   - **Resolution**: Triggers alerts for any discrepancies so administrators can investigate promptly.
+
+### Failed Transfers
+   - **Automatic Retry**: Retries failed transfers up to a defined threshold.
+   - **Escalation**: Transfers that fail after multiple attempts are flagged for manual review.
+
+### Real-Time Monitoring and Alerts
+   - **Health Checks**: Periodic checks to ensure system uptime and availability.
+   - **Alerts**: Critical issues trigger immediate alerts to the admin team for rapid intervention.
+
+---
+
+## Summary
+
+By designing this system, I’ve addressed the challenges associated with reliable fund distribution, accurate reconciliation, and error handling in fiat-to-USDC conversion. Each component—from the treasury wallet to the transaction monitoring service—works cohesively to ensure secure, efficient, and traceable fund management. This design is scalable and ready for real-world application, providing a seamless user experience backed by robust error-handling and reconciliation processes.
+
+
+
+### Written by [Pulkit](https://github.com/Pulkit1822)
