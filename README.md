@@ -118,6 +118,106 @@ Create a production-ready system for converting fiat currency to USDC through a 
 - Security tests
 - Compliance tests
 
+## Implementation Guidelines
+
+1. Code Quality
+- Follow SOLID principles
+- Implement design patterns appropriately
+- Maintain consistent coding style
+- Include comprehensive comments
+- Use TypeScript for type safety
+
+2. Security Considerations
+- Implement rate limiting
+- Use secure communication protocols
+- Implement proper authentication
+- Follow secure coding practices
+- Regular security audits
+
+3. Testing Requirements
+- 100% unit test coverage
+- Integration tests for critical paths
+- Load testing scenarios
+- Security testing procedures
+- Compliance verification
+
+4. Performance Metrics
+- Transaction processing time < 1s
+- System uptime > 99.99%
+- API response time < 100ms
+- Scalability to handle 1000+ TPS
+
+## Additional Requirements
+
+1. Error Handling
+- Comprehensive error codes
+- Detailed error messages
+- Error recovery procedures
+- Fallback mechanisms
+
+2. Monitoring
+- Real-time dashboards
+- Alert configurations
+- Performance metrics
+- Audit logging
+
+3. Compliance
+- GDPR compliance
+- Financial regulations
+- Data protection
+- Audit requirements
+
+4. Deployment
+- Blue-green deployment strategy
+- Rollback procedures
+- Backup strategies
+- Disaster recovery plans
+
+## Example Usage
+
+Please provide working examples for:
+
+1. User onboarding flow
+2. Transaction processing
+3. Treasury management
+4. System monitoring
+5. Error handling
+6. Deployment procedures
+
+## Output Expectations
+
+The response should include:
+
+1. Complete source code for all components
+2. Detailed documentation
+3. Configuration files
+4. Test suites
+5. Deployment guides
+6. Security protocols
+7. Monitoring setup
+
+Note: Generate all diagrams using Mermaid or PlantUML syntax for easy rendering.
+
+## Sample Data
+
+Include sample data for:
+1. User profiles
+2. Transactions
+3. Exchange rates
+4. System configurations
+5. Test scenarios
+
+## Evaluation Criteria
+
+The implementation will be evaluated based on:
+1. Code quality and organization
+2. Security measures
+3. Performance optimization
+4. Documentation completeness
+5. Test coverage
+6. Deployment readiness
+7. Compliance adherence
+
 ## Technical Detailed Component Architecture
 
 ### Overview
@@ -323,554 +423,3 @@ We welcome contributions to this project! To contribute, follow these steps:
    Your pull request will be reviewed by the project maintainers. Once approved, it will be merged into the main branch.
 
 Thank you for contributing to this project!
-
-## Admin Guides
-
-### Overview
-
-This document provides detailed instructions and guidelines for administrators to manage and maintain the system effectively. It covers various aspects such as user management, transaction monitoring, treasury operations, system configuration, reporting and analytics, security, compliance, backup and disaster recovery, and example usage.
-
-### User Management
-
-#### User Registration
-- Ensure that users complete the registration process by providing necessary details such as name, email, and KYC information.
-- Verify user identities through the integrated KYC/AML compliance system.
-- Manage user wallets and banking information.
-
-#### User Authentication
-- Monitor user authentication activities.
-- Implement multi-factor authentication for enhanced security.
-- Handle user authentication issues and provide support.
-
-### Transaction Monitoring
-
-#### Real-time Monitoring
-- Monitor real-time fiat deposit detection and USDC distribution.
-- Track transaction statuses and ensure timely processing.
-- Manage multi-currency transactions and exchange rates.
-
-#### Alert Management
-- Configure and manage alerts for transaction anomalies.
-- Respond to alerts and take necessary actions to mitigate risks.
-- Maintain an audit trail of all alerts and actions taken.
-
-### Treasury Operations
-
-#### Multi-signature Wallet Management
-- Manage multi-signature wallets for secure fund management.
-- Ensure proper authorization for all transactions.
-- Monitor wallet activities and maintain security protocols.
-
-#### Liquidity Pool Management
-- Manage liquidity pools to ensure sufficient funds for transactions.
-- Implement rebalancing mechanisms to maintain optimal liquidity levels.
-- Monitor and manage risks associated with liquidity pools.
-
-### System Configuration
-
-#### Cloud Architecture
-- Set up and configure cloud infrastructure (AWS/GCP/Azure).
-- Implement high availability and disaster recovery plans.
-- Monitor system performance and scalability.
-
-#### Kubernetes Configuration
-- Deploy and manage Kubernetes clusters for microservices.
-- Configure Kubernetes manifests and environment settings.
-- Monitor and manage Kubernetes resources.
-
-#### CI/CD Pipelines
-- Set up and manage CI/CD pipelines for continuous integration and deployment.
-- Implement automated testing and deployment processes.
-- Monitor pipeline performance and address issues.
-
-### Reporting and Analytics
-
-#### Reporting
-- Generate and manage reports for various system activities.
-- Ensure compliance with reporting requirements.
-- Maintain an audit trail of all reports generated.
-
-#### Analytics
-- Analyze transaction data and generate insights.
-- Monitor system performance and identify areas for improvement.
-- Implement analytics tools and dashboards for real-time monitoring.
-
-### Security
-
-#### End-to-end Encryption
-- Ensure end-to-end encryption for all data transmissions.
-- Implement hardware security module (HSM) integration for key management.
-- Monitor and manage encryption protocols.
-
-#### Multi-factor Authentication
-- Implement and manage multi-factor authentication for all users.
-- Monitor authentication activities and address issues.
-- Ensure compliance with security standards and protocols.
-
-#### Rate Limiting and Fraud Detection
-- Implement rate limiting to prevent abuse of system resources.
-- Monitor and detect fraudulent activities.
-- Take necessary actions to mitigate risks and ensure system security.
-
-### Compliance
-
-#### GDPR Compliance
-- Ensure compliance with GDPR regulations for data protection.
-- Monitor and manage user data in accordance with GDPR requirements.
-- Implement necessary measures to protect user privacy.
-
-#### Financial Regulations
-- Ensure compliance with financial regulations and standards.
-- Monitor and manage financial transactions in accordance with regulatory requirements.
-- Maintain an audit trail of all financial activities.
-
-#### Data Protection
-- Implement data protection measures to ensure the security of user data.
-- Monitor and manage data access and usage.
-- Ensure compliance with data protection regulations.
-
-### Backup and Disaster Recovery
-
-#### Backup Strategies
-- Implement backup strategies to ensure data availability.
-- Monitor and manage backup processes.
-- Ensure regular backups and data integrity.
-
-#### Disaster Recovery Plans
-- Develop and implement disaster recovery plans.
-- Monitor and manage disaster recovery processes.
-- Ensure system resilience and quick recovery in case of disasters.
-
-### Example Usage
-
-#### User Onboarding Flow
-- Provide step-by-step instructions for user onboarding.
-- Ensure users complete the registration and KYC process.
-- Monitor and manage user onboarding activities.
-
-#### Transaction Processing
-- Provide guidelines for processing transactions.
-- Monitor real-time transaction activities.
-- Ensure timely and accurate transaction processing.
-
-#### Treasury Management
-- Provide instructions for managing treasury operations.
-- Monitor and manage multi-signature wallets and liquidity pools.
-- Implement rebalancing mechanisms and risk management strategies.
-
-#### System Monitoring
-- Provide guidelines for monitoring system activities.
-- Implement real-time dashboards and alert configurations.
-- Monitor system performance and address issues.
-
-#### Error Handling
-- Provide instructions for handling errors and exceptions.
-- Implement comprehensive error codes and detailed error messages.
-- Monitor and manage error recovery procedures.
-
-#### Deployment Procedures
-- Provide step-by-step instructions for deploying the system.
-- Implement blue-green deployment strategies.
-- Monitor and manage deployment processes.
-
-### Conclusion
-
-This admin guide provides comprehensive instructions and guidelines for managing and maintaining the system. By following these guidelines, administrators can ensure the system's security, reliability, and scalability.
-
-## API Documentation
-
-### Overview
-
-This document provides detailed API documentation for the production-ready system for converting fiat currency to USDC through a centralized treasury. The documentation includes endpoints for user registration, transaction creation, treasury operation creation, and monitoring event creation.
-
-### Endpoints
-
-#### User Registration
-- **Endpoint:** `/register`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "name": "string",
-    "email": "string"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "id": "string",
-    "name": "string",
-    "email": "string",
-    "kycStatus": "string",
-    "walletAddress": "string",
-    "bankVerified": true
-  }
-  ```
-
-#### Transaction Creation
-- **Endpoint:** `/transaction`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "userId": "string",
-    "amount": "number",
-    "currency": "string"
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "id": "string",
-    "userId": "string",
-    "amount": "number",
-    "currency": "string",
-    "status": "string",
-    "exchangeRate": "number",
-    "usdcAmount": "number"
-  }
-  ```
-
-#### Treasury Operation Creation
-- **Endpoint:** `/treasury/operation`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "type": "string",
-    "details": {}
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "id": "string",
-    "type": "string",
-    "status": "string",
-    "details": {}
-  }
-  ```
-
-#### Monitoring Event Creation
-- **Endpoint:** `/monitoring/event`
-- **Method:** `POST`
-- **Request Body:**
-  ```json
-  {
-    "type": "string",
-    "details": {}
-  }
-  ```
-- **Response:**
-  ```json
-  {
-    "id": "string",
-    "type": "string",
-    "status": "string",
-    "details": {}
-  }
-  ```
-
-## Deployment Guides
-
-### Overview
-
-This document provides detailed instructions for deploying the production-ready system for converting fiat currency to USDC through a centralized treasury. The deployment process focuses on security, reliability, and scalability.
-
-### Prerequisites
-
-Before starting the deployment process, ensure that you have the following prerequisites:
-
-1. A cloud provider account (AWS, GCP, or Azure)
-2. Kubernetes cluster set up and configured
-3. Docker installed on your local machine
-4. kubectl installed and configured to interact with your Kubernetes cluster
-5. CI/CD pipeline configured (refer to `infrastructure/ci-cd-pipelines.yaml`)
-
-### Deployment Steps
-
-#### 1. Build Docker Images
-
-First, build the Docker images for each microservice. Navigate to the root directory of each microservice and run the following command:
-
-```sh
-docker build -t <image-name>:<tag> .
-```
-
-Replace `<image-name>` with the name of the microservice (e.g., user-service) and `<tag>` with the desired tag (e.g., latest).
-
-#### 2. Push Docker Images to Container Registry
-
-Push the built Docker images to your container registry. Run the following command for each image:
-
-```sh
-docker push <container-registry>/<image-name>:<tag>
-```
-
-Replace `<container-registry>` with the URL of your container registry, `<image-name>` with the name of the microservice, and `<tag>` with the desired tag.
-
-#### 3. Update Kubernetes Configuration
-
-Update the Kubernetes configuration files (`infrastructure/kubernetes-configuration.yaml`) with the correct image names and tags. Ensure that the `image` field for each container points to the correct container registry, image name, and tag.
-
-#### 4. Apply Kubernetes Configuration
-
-Apply the updated Kubernetes configuration to deploy the microservices to your Kubernetes cluster. Run the following command:
-
-```sh
-kubectl apply -f infrastructure/kubernetes-configuration.yaml
-```
-
-#### 5. Verify Deployment
-
-Verify that the microservices are deployed and running correctly. Run the following command to check the status of the deployments:
-
-```sh
-kubectl get deployments -n fiat-to-usdc
-```
-
-Ensure that all deployments have the desired number of replicas and are in a healthy state.
-
-#### 6. Set Up Monitoring
-
-Set up monitoring for the deployed system. Refer to the `infrastructure/monitoring-setup.md` document for detailed instructions on configuring Prometheus, Grafana, and the ELK stack.
-
-#### 7. Configure CI/CD Pipeline
-
-Configure the CI/CD pipeline to automate the build, test, and deployment processes. Refer to the `infrastructure/ci-cd-pipelines.yaml` file for the pipeline configuration.
-
-#### 8. Perform Initial Tests
-
-Perform initial tests to ensure that the system is functioning correctly. Run unit tests, integration tests, and load tests to validate the deployment. Refer to the `testing` directory for test scripts and configurations.
-
-#### 9. Monitor and Maintain
-
-Continuously monitor the system's performance and health. Set up alerts and dashboards to track key metrics and respond to any issues promptly. Regularly update the system with security patches and improvements.
-
-### Conclusion
-
-Following these deployment steps ensures that the system is deployed securely, reliably, and scalably. Regular monitoring and maintenance are essential to keep the system running smoothly and efficiently.
-
-## Security Documentation
-
-### Overview
-
-This document outlines the security measures and protocols implemented in the system to ensure the safety and integrity of user data and transactions.
-
-### Security Measures
-
-#### 1. End-to-End Encryption
-All data transmitted between the client and server is encrypted using industry-standard encryption protocols (e.g., TLS/SSL) to prevent unauthorized access and ensure data confidentiality.
-
-#### 2. Hardware Security Module (HSM) Integration
-The system integrates with a Hardware Security Module (HSM) to securely manage cryptographic keys and perform cryptographic operations. This ensures that sensitive keys are protected from unauthorized access and tampering.
-
-#### 3. Multi-Factor Authentication (MFA)
-Multi-factor authentication is implemented to provide an additional layer of security for user accounts. Users are required to provide multiple forms of verification (e.g., password and OTP) to access their accounts.
-
-#### 4. Rate Limiting and Fraud Detection
-Rate limiting is implemented to prevent abuse and protect against brute-force attacks. The system also includes fraud detection mechanisms to identify and mitigate suspicious activities.
-
-#### 5. Secure Communication Protocols
-All communication between system components is secured using secure communication protocols (e.g., HTTPS, WSS) to ensure data integrity and confidentiality.
-
-#### 6. Secure Coding Practices
-The system follows secure coding practices to minimize vulnerabilities and ensure the security of the codebase. Regular code reviews and security audits are conducted to identify and address potential security issues.
-
-#### 7. Regular Security Audits
-Regular security audits are conducted to assess the security posture of the system and identify potential vulnerabilities. The audits include penetration testing, code reviews, and vulnerability assessments.
-
-#### 8. Data Protection and Privacy
-The system complies with data protection and privacy regulations (e.g., GDPR) to ensure the protection of user data. Data is stored securely and access is restricted to authorized personnel only.
-
-#### 9. Incident Response Plan
-An incident response plan is in place to handle security incidents effectively. The plan includes procedures for detecting, responding to, and recovering from security incidents.
-
-#### 10. Backup and Disaster Recovery
-Regular backups are performed to ensure data availability and integrity. A disaster recovery plan is in place to ensure the system can recover from catastrophic events and continue operations.
-
-### Security Protocols
-
-#### 1. Authentication and Authorization
-- User authentication is performed using secure methods (e.g., OAuth, JWT).
-- Role-based access control (RBAC) is implemented to restrict access to sensitive resources based on user roles and permissions.
-
-#### 2. Data Encryption
-- Data at rest is encrypted using strong encryption algorithms (e.g., AES-256).
-- Data in transit is encrypted using secure communication protocols (e.g., TLS/SSL).
-
-#### 3. Key Management
-- Cryptographic keys are managed securely using a Hardware Security Module (HSM).
-- Key rotation and revocation procedures are in place to ensure the security of cryptographic keys.
-
-#### 4. Secure Development Lifecycle (SDLC)
-- Security is integrated into the development lifecycle, from design to deployment.
-- Regular security training is provided to developers to ensure they are aware of secure coding practices and potential security threats.
-
-#### 5. Monitoring and Logging
-- Real-time monitoring and logging are implemented to detect and respond to security incidents.
-- Audit logs are maintained to provide a record of security-related events and activities.
-
-### Compliance
-
-#### 1. GDPR Compliance
-The system complies with the General Data Protection Regulation (GDPR) to ensure the protection of user data and privacy.
-
-#### 2. Financial Regulations
-The system complies with relevant financial regulations to ensure the security and integrity of financial transactions.
-
-#### 3. Data Protection
-Data protection measures are implemented to ensure the confidentiality, integrity, and availability of user data.
-
-#### 4. Audit Requirements
-Regular audits are conducted to assess the security posture of the system and ensure compliance with regulatory requirements.
-
-### Conclusion
-
-The security measures and protocols outlined in this document are designed to ensure the safety and integrity of the system and its users. Regular security audits and continuous improvement efforts are essential to maintaining a secure and reliable system.
-
-## System Architecture Documentation
-
-### Overview
-
-This document provides a detailed overview of the system architecture for the production-ready system for converting fiat currency to USDC through a centralized treasury. The architecture focuses on security, reliability, and scalability, and includes all necessary components from user interaction to blockchain integration.
-
-### Component Diagrams
-
-#### User Service
-- Complete authentication system
-- KYC integration
-- Wallet management
-- User preferences
-
-#### Transaction Service
-- Payment processing
-- Exchange rate management
-- Fee calculation
-- Transaction status tracking
-
-#### Treasury Service
-- Wallet management
-- Liquidity pool operations
-- Rebalancing logic
-- Risk management
-
-#### Monitoring Service
-- Transaction monitoring
-- Alert management
-- Reporting
-- Analytics
-
-#### Smart Contracts
-- Treasury contract
-- User wallet contract
-- Transaction verification
-- Access control
-
-#### Frontend Components
-- User dashboard
-- Transaction management
-- Admin panel
-- Reporting interface
-
-### Sequence Diagrams
-
-#### User Registration Flow
-```plantuml
-@startuml
-actor User
-participant "User Service" as US
-participant "KYC Service" as KYC
-participant "Wallet Service" as WS
-participant "Bank Verification Service" as BVS
-
-User -> US: Register
-US -> KYC: Verify KYC
-KYC -> US: KYC Status
-US -> WS: Create Wallet
-WS -> US: Wallet Address
-US -> BVS: Verify Bank Details
-BVS -> US: Bank Verification Status
-US -> User: Registration Complete
-@enduml
-```
-
-#### Transaction Processing Flow
-```plantuml
-@startuml
-actor User
-participant "Transaction Service" as TS
-participant "Fiat Deposit Service" as FDS
-participant "USDC Distribution Service" as UDS
-participant "Transaction Status Service" as TSS
-participant "Exchange Rate Service" as ERS
-
-User -> TS: Initiate Transaction
-TS -> FDS: Detect Deposit
-FDS -> TS: Deposit Status
-TS -> ERS: Get Exchange Rate
-ERS -> TS: Exchange Rate
-TS -> UDS: Distribute USDC
-UDS -> TS: USDC Distribution Status
-TS -> TSS: Track Status
-TSS -> TS: Status Update
-TS -> User: Transaction Complete
-@enduml
-```
-
-### Network Architecture
-
-The system is designed using a microservices-based architecture, with each service running in its own container. The services communicate with each other using RESTful APIs and are deployed on a Kubernetes cluster for high availability and scalability.
-
-#### Components
-- User Service
-- Transaction Service
-- Treasury Service
-- Monitoring Service
-- Smart Contracts
-- Frontend Components
-
-#### Communication
-- RESTful APIs
-- Event-driven architecture using message queues
-
-### Database Schema
-
-The system uses a relational database to store user information, transaction details, and other relevant data. The database schema includes the following tables:
-
-- Users
-  - id (UUID)
-  - name (VARCHAR)
-  - email (VARCHAR)
-  - kyc_status (VARCHAR)
-  - wallet_address (VARCHAR)
-  - bank_verified (BOOLEAN)
-
-- Transactions
-  - id (UUID)
-  - user_id (UUID)
-  - amount (DECIMAL)
-  - currency (VARCHAR)
-  - status (VARCHAR)
-  - exchange_rate (DECIMAL)
-  - usdc_amount (DECIMAL)
-
-- Treasury Operations
-  - id (UUID)
-  - type (VARCHAR)
-  - status (VARCHAR)
-  - details (JSON)
-
-- Monitoring Events
-  - id (UUID)
-  - type (VARCHAR)
-  - status (VARCHAR)
-  - details (JSON)
-
-### API Documentation
-
-The API documentation is provided in OpenAPI format and includes detailed information about the endpoints, request and response formats, and authentication mechanisms.
-
-### Conclusion
-
-This document provides a comprehensive overview of the system architecture for the production-ready system for converting fiat currency to USDC. The architecture is designed to be secure, reliable, and scalable, and includes all necessary components from user interaction to blockchain integration.
