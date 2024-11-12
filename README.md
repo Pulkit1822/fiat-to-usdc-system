@@ -125,27 +125,26 @@ The transaction flow is the backbone of this system. It represents each step fro
 
 **3. Fiat to USDC Conversion**  
    - After verifying the fiat deposit, the system checks if the treasury wallet or liquidity pool has sufficient USDC to complete the transaction. If funds are insufficient, it initiates a rebalancing process. Then, based on current conversion rates, the fiat amount is converted into the equivalent USDC.
-
-![Screenshot 2024-11-12 at 10.11.59 PM](https://hackmd.io/_uploads/rkkuHW-z1e.png)
+   ![Screenshot 2024-11-12 at 10.11.59 PM](https://hackmd.io/_uploads/rkkuHW-z1e.png)
 
 
 
 **4. USDC Transfer to User’s Wallet**  
    - The system transfers the calculated amount of USDC from the treasury wallet or liquidity pool to the user’s wallet on the blockchain. This transaction is recorded for accountability and transparency.
-
-![Screenshot 2024-11-12 at 10.14.21 PM](https://hackmd.io/_uploads/rk7-I-ZMkx.png)
+   ![Screenshot 2024-11-12 at 10.14.21 PM](https://hackmd.io/_uploads/rk7-I-ZMkx.png)
 
 
 
 **5. Confirmation and Reconciliation**  
    - Finally, the system performs reconciliation by cross-verifying bank records, blockchain transactions, and internal logs. This ensures that every fiat deposit matches an outgoing USDC transaction, maintaining an accurate ledger for auditing and troubleshooting.
-
-![Confirmation and Reconciliation](https://hackmd.io/_uploads/ByBmUZbfJl.png)
+   ![Confirmation and Reconciliation](https://hackmd.io/_uploads/ByBmUZbfJl.png)
 
 
 ---
 
 ## 6. Technical Component Architecture
+![Screenshot 2024-11-12 at 10.07.59 PM](https://hackmd.io/_uploads/By8UibZf1e.png)
+
 
 To develop a secure, scalable solution, I divided the architecture into key services that interact through APIs and automated workflows:
 
